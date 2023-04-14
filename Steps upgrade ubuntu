@@ -1,0 +1,29 @@
+The first step for starting the update before doing anything go to take backup
+This is very important
+With the AWS EC2 server upgrade suppose Ubuntu 16.04 to 18.04
+Login to console
+Select the required Ec2 and take his AMI.
+After AMI creation is completed.
+ ssh into that server
+Here are 4 common commands we need to run
+But first, check how much space we have for that run below command
+ df -lh
+
+Check available space if everything going smoothly maximum of 1 GB space need for the upgrade.
+Now run the below command
+1- sudo apt-get update
+2- sudo apt-get dist-upgrade
+3- sudo apt-get install update-manager-core
+4- sudo do-release-upgrade
+ When we run the last command our upgrade process will run.
+
+Follow all instructions which are giving by the upgrade procedure and keep an eye on it every step
+
+
+
+
+When an upgrade is complete restart is required. Press yes to complete the procedure.
+After restarting our upgrade is complete.
+To check which version is now running type the below command
+
+cat /etc/os-release
